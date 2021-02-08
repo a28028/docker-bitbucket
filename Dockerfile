@@ -34,7 +34,7 @@ VOLUME ["/var/atlassian/bitbucket","/opt/atlassian/bitbucket/logs"]
 # Set the default working directory as the Bitbucket home directory.
 WORKDIR /var/atlassian/bitbucket
 
-COPY "docker-entrypoint.sh" "/"
-ENTRYPOINT ["/docker-entrypoint.sh"]
+#COPY "docker-entrypoint.sh" "/"
+#ENTRYPOINT ["/docker-entrypoint.sh"]
 # Run Atlassian Bitbucket as a foreground process by default.
 CMD ["/opt/atlassian/bitbucket/bin/start-bitbucket.sh", "-fg"]
