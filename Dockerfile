@@ -35,7 +35,7 @@ VOLUME ["/var/atlassian/bitbucket","/opt/atlassian/bitbucket/logs"]
 WORKDIR /var/atlassian/bitbucket
 
 COPY "docker-entrypoint.sh" "/"
-RUN chown root:root /docker-entrypoint.sh && chmod 4755 /docker-entrypoint.sh
+RUN chmod +x docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 # Run Atlassian Bitbucket as a foreground process by default.
 CMD ["/opt/atlassian/bitbucket/bin/start-bitbucket.sh", "-fg"]
